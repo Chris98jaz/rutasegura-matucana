@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RutaSegura Matucana</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7f5;
+      color: #172033;
+    }
+
+    .portada {
+      min-height: 100vh;
+      background: linear-gradient(
+        160deg,
+        #073b35 0%,
+        #075e54 55%,
+        #0b776b 100%
+      );
+
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      padding: 35px 22px;
+    }
+
+    .icono {
+      width: 95px;
+      height: 95px;
+      background: rgba(255,255,255,0.14);
+      border: 2px solid rgba(255,255,255,0.25);
+      border-radius: 28px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 45px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 35px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .matucana {
+      font-size: 18px;
+      letter-spacing: 5px;
+      font-weight: 600;
+      opacity: 0.9;
+      margin-bottom: 12px;
+    }
+
+    .lema {
+      font-size: 16px;
+      opacity: 0.85;
+      margin-bottom: 38px;
+    }
+
+    .ruta {
+      width: 100%;
+      max-width: 420px;
+
+      background: white;
+      color: #172033;
+
+      border-radius: 24px;
+      padding: 22px;
+
+      text-align: left;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+    }
+
+    .etiqueta {
+      color: #08796d;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 7px;
+    }
+
+    .ruta h2 {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .ruta p {
+      color: #65706e;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .datos {
+      display: flex;
+      justify-content: space-between;
+
+      border-top: 1px solid #e5e9e7;
+      border-bottom: 1px solid #e5e9e7;
+
+      padding: 15px 0;
+      margin-bottom: 20px;
+    }
+
+    .dato {
+      text-align: center;
+      flex: 1;
+    }
+
+    .dato strong {
+      display: block;
+      font-size: 16px;
+      color: #172033;
+    }
+
+    .dato span {
+      font-size: 11px;
+      color: #7a8582;
+    }
+
+    .boton {
+      display: block;
+      width: 100%;
+
+      background: #08796d;
+      color: white;
+
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+
+      padding: 16px;
+      border-radius: 14px;
+    }
+
+    .pie {
+      margin-top: 25px;
+      font-size: 12px;
+      opacity: 0.65;
+    }
+  html {
+  scroll-behavior: smooth;
+}
+
+.servicios {
+  min-height: 100vh;
+  background: #f4f7f5;
+  padding: 70px 22px;
+}
+
+.contenido {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.mini-titulo {
+  color: #08796d;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.servicios h2 {
+  font-size: 30px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  color: #172033;
+}
+
+.descripcion {
+  color: #65706e;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.opciones {
+  display: grid;
+  gap: 12px;
+}
+
+.opcion {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+
+  display: grid;
+  grid-template-columns: 48px 1fr 20px;
+  align-items: center;
+  gap: 12px;
+
+  box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.opcion-icono {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #e8f4f1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.opcion h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.opcion p {
+  color: #74807d;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.opcion > span {
+  font-size: 27px;
+  color: #08796d;
+}
+
+.app-card {
+  margin-top: 28px;
+  padding: 22px;
+
+  background: #073b35;
+  color: white;
+
+  border-radius: 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-card span {
+  font-size: 10px;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.app-card h3 {
+  font-size: 22px;
+  margin: 4px 0;
+}
+
+.app-card p {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.telefono {
+  font-size: 38px;
+}
+/* ===== EXPERIENCIA ANTANKALLO ===== */
+
+.experiencia {
+  background: #071f1c;
+  padding: 75px 22px;
+  color: white;
+}
+
+.experiencia .mini-titulo {
+  color: #52c7b8;
+}
+
+.experiencia h2 {
+  font-size: 30px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.experiencia .descripcion {
+  color: rgba(255,255,255,0.70);
+  max-width: 600px;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.video-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.20);
+}
+
+.video-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000000;
+}
+
+.video-info {
+  padding: 18px;
+}
+
+.video-info span {
+  display: block;
+  color: #08796d;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  margin-bottom: 7px;
+}
+
+.video-info h3 {
+  color: #172033;
+  font-size: 17px;
+  line-height: 1.3;
+  margin-bottom: 7px;
+}
+
+.video-info p {
+  color: #74807d;
+  font-size: 13px;
+}
+
+/* Celulares */
+@media (max-width: 650px) {
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experiencia {
+    padding: 60px 18px;
+  }
+
+  .experiencia h2 {
+    font-size: 27px;
+  }
+}
+.logo-principal {
+  width: 100%;
+  max-width: 430px;
+  margin-bottom: 12px;
+}
+
+.logo-principal img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.institucion {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: left;
+  color: white;
+}
+
+.institucion img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.institucion strong,
+.institucion span,
+.institucion small {
+  display: block;
+}
+
+.institucion strong {
+  font-size: 14px;
+}
+
+.institucion span {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.institucion small {
+  font-size: 10px;
+  opacity: 0.6;
+  margin-top: 3px;
+}
+/* ===== GALERÍA TRABAJO DE CAMPO ===== */
+
+.galeria-campo {
+  background: #f4f7f5;
+  padding: 75px 22px;
+}
+
+.galeria-campo h2 {
+  font-size: 30px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  color: #172033;
+}
+
+.galeria-campo .descripcion {
+  max-width: 620px;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 220px;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+/* La foto grupal tendrá mayor protagonismo */
+.galeria-grid img:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.015);
+}
+
+/* TABLET */
+@media (max-width: 800px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 190px;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 550px) {
+  .galeria-campo {
+    padding: 60px 18px;
+  }
+
+  .galeria-campo h2 {
+    font-size: 27px;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+    gap: 8px;
+  }
+
+  .galeria-grid img:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .galeria-grid img {
+    border-radius: 14px;
+  }
+}
+.opcion {
+  cursor: pointer;
+}
+
+.opcion:active {
+  transform: scale(0.98);
+}
+/* ===== DETALLE DE LA RUTA ===== */
+
+.detalle-ruta {
+  background: #ffffff;
+  padding: 75px 22px;
+}
+
+.detalle-ruta h2 {
+  color: #172033;
+  font-size: 30px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.detalle-ruta .descripcion {
+  max-width: 620px;
+  color: #6d7976;
+}
+
+/* Datos principales */
+
+.ruta-resumen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.dato-ruta {
+  background: #f4f7f5;
+  border-radius: 18px;
+  padding: 22px 12px;
+  text-align: center;
+}
+
+.dato-ruta > span {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.dato-ruta strong {
+  display: block;
+  color: #172033;
+  font-size: 20px;
+}
+
+.dato-ruta small {
+  display: block;
+  color: #7b8784;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  letter-spacing: 0.7px;
+}
+
+/* Hitos y seguridad */
+
+.ruta-caracteristicas {
+  margin-top: 25px;
+  display: grid;
+  gap: 12px;
+}
+
+.ruta-caracteristicas > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f8faf9;
+  border: 1px solid #e5ebe8;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.ruta-caracteristicas p {
+  margin: 0;
+  color: #74807d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ruta-caracteristicas strong {
+  display: block;
+  color: #172033;
+  margin-bottom: 2px;
+}
+
+.punto {
+  width: 17px;
+  height: 17px;
+  min-width: 17px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.12);
+}
+
+.punto.verde {
+  background: #00897b;
+}
+
+.punto.rojo {
+  background: #ef4444;
+}
+
+.punto.azul {
+  background: #168de2;
+}
+
+/* Aplicación */
+
+.app-destacada {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #073c35;
+  color: white;
+}
+
+.app-icono {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.app-destacada strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.app-destacada p {
+  margin: 0;
+  color: rgba(255,255,255,0.72);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Celular */
+
+@media (max-width: 550px) {
+
+  .detalle-ruta {
+    padding: 60px 18px;
+  }
+
+  .detalle-ruta h2 {
+    font-size: 27px;
+  }
+
+  .ruta-resumen {
+    gap: 7px;
+  }
+
+  .dato-ruta {
+    padding: 18px 6px;
+  }
+
+  .dato-ruta strong {
+    font-size: 16px;
+  }
+
+  .dato-ruta small {
+    font-size: 9px;
+  }
+}
+/* ===== SEGURIDAD DE LA RUTA ===== */
+
+.seguridad-ruta {
+  background: #f4f7f5;
+  padding: 75px 22px;
+}
+
+.seguridad-ruta h2 {
+  color: #172033;
+  font-size: 30px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.seguridad-ruta .descripcion {
+  max-width: 650px;
+  color: #6d7976;
+}
+
+.seguridad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.seguridad-card {
+  background: white;
+  border: 1px solid #e4ebe8;
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.seguridad-icono {
+  font-size: 27px;
+  margin-bottom: 14px;
+}
+
+.seguridad-card strong {
+  display: block;
+  color: #172033;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.seguridad-card p {
+  margin: 0;
+  color: #74807d;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* SOS */
+
+.sos-destacado {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff2f2;
+  border: 1px solid #ffd4d4;
+  border-radius: 22px;
+  padding: 22px;
+}
+
+.sos-icono {
+  width: 62px;
+  height: 62px;
+  min-width: 62px;
+  border-radius: 18px;
+  background: #dc2626;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.sos-destacado span {
+  display: block;
+  color: #dc2626;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.sos-destacado strong {
+  display: block;
+  color: #172033;
+  font-size: 17px;
+}
+
+.sos-destacado p {
+  margin: 5px 0 0;
+  color: #74807d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Celular */
+
+@media (max-width: 650px) {
+  .seguridad-ruta {
+    padding: 60px 18px;
+  }
+
+  .seguridad-ruta h2 {
+    font-size: 27px;
+  }
+
+  .seguridad-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sos-destacado {
+    align-items: flex-start;
+  }
+}
+/* ===== CLIMA Y CONDICIONES ===== */
+
+.clima-ruta {
+  background: #ffffff;
+  padding: 75px 22px;
+}
+
+.clima-ruta h2 {
+  color: #172033;
+  font-size: 30px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.clima-ruta .descripcion {
+  max-width: 650px;
+  color: #6d7976;
+}
+
+/* Datos analizados */
+
+.clima-datos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.clima-dato {
+  background: #f4f7f5;
+  border-radius: 18px;
+  padding: 22px 12px;
+  text-align: center;
+}
+
+.clima-dato > span {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.clima-dato strong {
+  display: block;
+  color: #172033;
+  font-size: 15px;
+}
+
+.clima-dato small {
+  display: block;
+  color: #7b8784;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+/* Estados */
+
+.estados-clima {
+  display: grid;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.estado-clima {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 17px;
+  padding: 16px;
+}
+
+.estado-clima > span {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.estado-clima strong {
+  display: block;
+  color: #172033;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.estado-clima p {
+  margin: 0;
+  color: #66726f;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Verde */
+
+.estado-clima.favorable {
+  background: #ecf8f3;
+  border: 1px solid #ccebdd;
+}
+
+.estado-clima.favorable > span {
+  background: #16865f;
+}
+
+/* Amarillo */
+
+.estado-clima.precaucion {
+  background: #fff8e8;
+  border: 1px solid #f4dfaa;
+}
+
+.estado-clima.precaucion > span {
+  background: #d99a16;
+}
+
+/* Rojo */
+
+.estado-clima.no-recomendado {
+  background: #fff0f0;
+  border: 1px solid #ffd1d1;
+}
+
+.estado-clima.no-recomendado > span {
+  background: #dc2626;
+}
+
+/* App */
+
+.clima-app {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #073c35;
+  color: white;
+}
+
+.clima-app-icono {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+}
+
+.clima-app span {
+  display: block;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: 0.65;
+  margin-bottom: 3px;
+}
+
+.clima-app strong {
+  display: block;
+  font-size: 16px;
+}
+
+.clima-app p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.45;
+  opacity: 0.72;
+}
+
+/* Celular */
+
+@media (max-width: 550px) {
+
+  .clima-ruta {
+    padding: 60px 18px;
+  }
+
+  .clima-ruta h2 {
+    font-size: 27px;
+  }
+
+  .clima-datos {
+    gap: 7px;
+  }
+
+  .clima-dato {
+    padding: 18px 6px;
+  }
+
+  .clima-dato strong {
+    font-size: 12px;
+  }
+
+  .clima-dato small {
+    font-size: 9px;
+  }
+}
+/* ===== SERVICIOS LOCALES ===== */
+
+.servicios-locales {
+  background: #f4f7f5;
+  padding: 75px 22px;
+}
+
+.servicios-locales h2 {
+  color: #172033;
+  font-size: 30px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.servicios-locales .descripcion {
+  max-width: 650px;
+  color: #6d7976;
+}
+
+/* Negocio demo */
+
+.negocio-demo {
+  margin-top: 30px;
+  background: #ffffff;
+  border: 1px solid #e2e9e6;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.negocio-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.negocio-icono {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 18px;
+  background: #fff4df;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 29px;
+}
+
+.negocio-cabecera span {
+  display: block;
+  color: #c78008;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+
+.negocio-cabecera h3 {
+  color: #172033;
+  font-size: 20px;
+  margin: 0;
+}
+
+.negocio-cabecera p {
+  color: #7a8582;
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+
+/* Productos */
+
+.productos-negocio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.productos-negocio span {
+  background: #f4f7f5;
+  color: #43504d;
+  border-radius: 50px;
+  padding: 9px 13px;
+  font-size: 12px;
+}
+
+/* Recomendación */
+
+.recomendacion-negocio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 20px;
+  padding: 15px;
+
+  background: #fff9ed;
+  border: 1px solid #f5e2b8;
+  border-radius: 15px;
+}
+
+.recomendacion-negocio > span {
+  font-size: 21px;
+}
+
+.recomendacion-negocio p {
+  margin: 0;
+  color: #6f6652;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Impacto local */
+
+.impacto-local {
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 17px;
+
+  background: #073c35;
+  color: white;
+
+  padding: 21px;
+  border-radius: 20px;
+}
+
+.impacto-icono {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+  background: rgba(255,255,255,0.12);
+
+  font-size: 25px;
+}
+
+.impacto-local span {
+  display: block;
+  color: #65d3c4;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+
+.impacto-local strong {
+  display: block;
+  font-size: 16px;
+}
+
+.impacto-local p {
+  margin: 5px 0 0;
+  color: rgba(255,255,255,0.72);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Celular */
+
+@media (max-width: 550px) {
+
+  .servicios-locales {
+    padding: 60px 18px;
+  }
+
+  .servicios-locales h2 {
+    font-size: 27px;
+  }
+
+  .negocio-demo {
+    padding: 19px;
+  }
+
+  .negocio-icono {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+  }
+
+  .negocio-cabecera h3 {
+    font-size: 18px;
+  }
+
+  .impacto-local {
+    align-items: flex-start;
+  }
+}
+</style>
+</head>
+
+<body>
+
+  <section class="portada">
+
+    <div class="logo-principal">
+  <img
+    src="media/logo/Logo_proyecto.png"
+    alt="RutaSegura Matucana"
+  >
+</div>
+
+<p class="lema">Explora con confianza</p>
+
+    <div class="ruta">
+
+      <div class="etiqueta">RUTA TURÍSTICA</div>
+
+      <h2>Catarata de Antankallo</h2>
+
+      <p>
+        Prepárate para recorrer uno de los principales
+        atractivos naturales de Matucana de forma
+        informada y segura.
+      </p>
+
+      <div class="datos">
+
+        <div class="dato">
+          <strong>2.8 km</strong>
+          <span>DISTANCIA</span>
+        </div>
+
+        <div class="dato">
+          <strong>+380 m</strong>
+          <span>DESNIVEL</span>
+        </div>
+
+        <div class="dato">
+          <strong>1h 30m</strong>
+          <span>TIEMPO</span>
+        </div>
+
+      </div>
+
+      <a href="#servicios" class="boton">
+        Explorar RutaSegura
+      </a>
+
+    </div>
+
+    <div class="institucion">
+  <img
+    src="media/logo/INSIGNIA_CETPRO_2026.png"
+    alt="CETPRO San Juan Bautista"
+  >
+
+  <div>
+    <strong>CETPRO San Juan Bautista</strong>
+    <span>Plataformas y Servicios de Tecnologías de la Información</span>
+    <small>Matucana · UGEL N.° 15 Huarochirí</small>
+  </div>
+</div>
+
+  </section>
+<section id="servicios" class="servicios">
+
+  <div class="contenido">
+
+    <span class="mini-titulo">RUTASEGURA MATUCANA</span>
+
+    <h2>Todo lo que necesitas para tu recorrido</h2>
+
+    <p class="descripcion">
+      Consulta información útil antes y durante tu visita
+      a la Catarata de Antankallo.
+    </p>
+ <div class="opcion" onclick="document.getElementById('detalle-ruta').scrollIntoView({ behavior: 'smooth' });">
+  <div class="opcion-icono">🗺️</div>
+  <div>
+    <h3>Explorar la ruta</h3>
+    <p>Conoce el recorrido, distancia y puntos importantes.</p>
+  </div>
+  <span>›</span>
+</div>
+
+      <div class="opcion" onclick="document.getElementById('seguridad-ruta').scrollIntoView({ behavior: 'smooth' });">
+        <div class="opcion-icono">⚠️</div>
+        <div>
+          <h3>Seguridad</h3>
+          <p>Recomendaciones y puntos de precaución.</p>
+        </div>
+        <span>›</span>
+      </div>
+
+      <div class="opcion" onclick="document.getElementById('clima-ruta').scrollIntoView({ behavior: 'smooth' });">
+        <div class="opcion-icono">☁️</div>
+        <div>
+          <h3>Clima</h3>
+          <p>Consulta las condiciones antes de iniciar.</p>
+        </div>
+        <span>›</span>
+      </div>
+
+      <div class="opcion" onclick="document.getElementById('servicios-locales').scrollIntoView({ behavior: 'smooth' });">
+        <div class="opcion-icono">🏪</div>
+        <div>
+          <h3>Servicios locales</h3>
+          <p>Encuentra establecimientos y servicios cercanos.</p>
+        </div>
+        <span>›</span>
+      </div>
+
+    </div>
+
+    <div class="app-card">
+      <div>
+        <span>APLICACIÓN MÓVIL</span>
+        <h3>RutaSegura</h3>
+        <p>Accede a navegación GPS y mapas offline.</p>
+      </div>
+
+      <div class="telefono">📱</div>
+    </div>
+
+  </div>
+  <section class="detalle-ruta" id="detalle-ruta">
+  <div class="contenido">
+
+    <span class="mini-titulo">RUTA TURÍSTICA</span>
+    <h2>Catarata de Antankallo</h2>
+
+    <p class="descripcion">
+      Consulta la información principal del recorrido antes de iniciar
+      tu visita y conoce los elementos de seguridad integrados en RutaSegura.
+    </p>
+
+    <div class="ruta-resumen">
+
+      <div class="dato-ruta">
+        <span>📏</span>
+        <strong>2.8 km</strong>
+        <small>Distancia</small>
+      </div>
+
+      <div class="dato-ruta">
+        <span>⛰️</span>
+        <strong>+380 m</strong>
+        <small>Desnivel</small>
+      </div>
+
+      <div class="dato-ruta">
+        <span>⏱️</span>
+        <strong>1 h 30 min</strong>
+        <small>Tiempo estimado</small>
+      </div>
+
+    </div>
+
+    <div class="ruta-caracteristicas">
+
+      <div>
+        <span class="punto verde"></span>
+        <p>
+          <strong>Hitos turísticos</strong>
+          Puntos importantes identificados durante el recorrido.
+        </p>
+      </div>
+
+      <div>
+        <span class="punto rojo"></span>
+        <p>
+          <strong>Puntos de precaución</strong>
+          Sectores donde el visitante debe desplazarse con mayor cuidado.
+        </p>
+      </div>
+
+      <div>
+        <span class="punto azul"></span>
+        <p>
+          <strong>Ubicación y navegación</strong>
+          RutaSegura utiliza la ubicación del visitante para apoyar el recorrido.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="app-destacada">
+      <div class="app-icono">📱</div>
+
+      <div>
+        <strong>Navegación con RutaSegura</strong>
+        <p>
+          Consulta la ruta, ubicación, puntos turísticos y zonas de
+          precaución desde la aplicación.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="seguridad-ruta" id="seguridad-ruta">
+  <div class="contenido">
+
+    <span class="mini-titulo">SEGURIDAD DEL VISITANTE</span>
+    <h2>Recorre Antankallo con precaución</h2>
+
+    <p class="descripcion">
+      RutaSegura identifica zonas que requieren mayor atención durante
+      el recorrido y brinda herramientas de apoyo ante una emergencia.
+    </p>
+
+    <div class="seguridad-grid">
+
+      <div class="seguridad-card">
+        <div class="seguridad-icono">🔴</div>
+        <div>
+          <strong>Puntos de precaución</strong>
+          <p>
+            Las zonas de mayor cuidado son identificadas para que el
+            visitante pueda reconocerlas durante su recorrido.
+          </p>
+        </div>
+      </div>
+
+      <div class="seguridad-card">
+        <div class="seguridad-icono">🥾</div>
+        <div>
+          <strong>Recorre con cuidado</strong>
+          <p>
+            Utiliza calzado adecuado, mantente en el sendero y presta
+            atención a sectores estrechos o de terreno irregular.
+          </p>
+        </div>
+      </div>
+
+      <div class="seguridad-card">
+        <div class="seguridad-icono">📍</div>
+        <div>
+          <strong>Ubicación durante la ruta</strong>
+          <p>
+            La aplicación utiliza la ubicación del visitante para
+            apoyar su orientación durante el recorrido.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sos-destacado">
+      <div class="sos-icono">SOS</div>
+
+      <div>
+        <span>FUNCIÓN DE EMERGENCIA</span>
+        <strong>Solicita ayuda desde RutaSegura</strong>
+        <p>
+          La aplicación incorpora una función SOS para apoyar al
+          visitante ante una situación de emergencia durante la ruta.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="clima-ruta" id="clima-ruta">
+  <div class="contenido">
+
+    <span class="mini-titulo">CONDICIONES DEL RECORRIDO</span>
+    <h2>Consulta el clima antes de salir</h2>
+
+    <p class="descripcion">
+      RutaSegura permite consultar las condiciones meteorológicas
+      antes de iniciar el recorrido hacia Antankallo y ayuda a evaluar
+      si es un momento adecuado para realizar la ruta.
+    </p>
+
+    <div class="clima-datos">
+
+      <div class="clima-dato">
+        <span>🌡️</span>
+        <strong>Temperatura</strong>
+        <small>Condición actual</small>
+      </div>
+
+      <div class="clima-dato">
+        <span>🌧️</span>
+        <strong>Probabilidad de lluvia</strong>
+        <small>Precipitación prevista</small>
+      </div>
+
+      <div class="clima-dato">
+        <span>🕐</span>
+        <strong>Horario</strong>
+        <small>Hora del recorrido</small>
+      </div>
+
+    </div>
+
+    <div class="estados-clima">
+
+      <div class="estado-clima favorable">
+        <span>✓</span>
+        <div>
+          <strong>Condiciones favorables</strong>
+          <p>Las condiciones permiten realizar el recorrido con normalidad.</p>
+        </div>
+      </div>
+
+      <div class="estado-clima precaucion">
+        <span>!</span>
+        <div>
+          <strong>Precaución / Inicio tardío</strong>
+          <p>
+            El clima o el horario requieren mayor atención antes de
+            comenzar el recorrido.
+          </p>
+        </div>
+      </div>
+
+      <div class="estado-clima no-recomendado">
+        <span>×</span>
+        <div>
+          <strong>Recorrido no recomendado</strong>
+          <p>
+            Las condiciones meteorológicas o el horario pueden hacer
+            que iniciar la ruta no sea recomendable.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="clima-app">
+      <div class="clima-app-icono">☁️</div>
+
+      <div>
+        <span>INFORMACIÓN EN LA APLICACIÓN</span>
+        <strong>Consulta actualizada antes de iniciar</strong>
+        <p>
+          La aplicación analiza información meteorológica y el horario
+          para mostrar una recomendación al visitante.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="servicios-locales" id="servicios-locales">
+  <div class="contenido">
+
+    <span class="mini-titulo">ECONOMÍA LOCAL</span>
+    <h2>Servicios para tu recorrido</h2>
+
+    <p class="descripcion">
+      RutaSegura conecta al visitante con establecimientos y servicios
+      locales que pueden ser útiles antes o durante su visita a Antankallo.
+    </p>
+
+    <div class="negocio-demo">
+
+      <div class="negocio-cabecera">
+        <div class="negocio-icono">🏪</div>
+
+        <div>
+          <span>ESTABLECIMIENTO ALIADO · DEMO</span>
+          <h3>Bodega El Caminante</h3>
+          <p>📍 Cerca del punto de inicio de la ruta</p>
+        </div>
+      </div>
+
+      <div class="productos-negocio">
+        <span>💧 Agua</span>
+        <span>🥤 Bebidas</span>
+        <span>🍫 Snacks</span>
+        <span>🧴 Protección solar</span>
+      </div>
+
+      <div class="recomendacion-negocio">
+        <span>💡</span>
+        <p>
+          Antes de iniciar tu recorrido, verifica que lleves agua,
+          protección solar y lo necesario para realizar la ruta.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="impacto-local">
+      <div class="impacto-icono">🤝</div>
+
+      <div>
+        <span>IMPACTO LOCAL</span>
+        <strong>Turismo que también beneficia a Matucana</strong>
+        <p>
+          RutaSegura busca dar visibilidad a emprendimientos y servicios
+          locales, conectando a los visitantes con la economía de la comunidad.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <section class="galeria-campo">
+
+  <div class="contenido">
+
+    <span class="mini-titulo">EXPERIENCIA REAL</span>
+
+    <h2>RutaSegura en campo</h2>
+
+    <p class="descripcion">
+      Conocimos y recorrimos la ruta hacia Antankallo para registrar
+      información real del trayecto y desarrollar una solución pensada
+      desde la experiencia del visitante.
+    </p>
+
+    <div class="galeria-grid">
+
+      <img src="media/fotos/GRUPO_web.jpg"
+           alt="Equipo RutaSegura en Antankallo">
+
+      <img src="media/fotos/FOTO_1_web.jpg"
+           alt="Trabajo de campo RutaSegura">
+
+      <img src="media/fotos/FOTO_2_web.jpg"
+           alt="Recorrido hacia Antankallo">
+
+      <img src="media/fotos/FOTO_3_web.jpg"
+           alt="Experiencia RutaSegura">
+
+      <img src="media/fotos/FOTO_4_web.jpg"
+           alt="Trabajo de campo en Antankallo">
+
+      <img src="media/fotos/FOTO_5_web.jpg"
+           alt="Equipo durante el recorrido">
+
+      <img src="media/fotos/FOTO_6_web.jpg"
+           alt="Ruta hacia Antankallo">
+
+    </div>
+
+  </div>
+
+</section>
+<section class="experiencia">
+
+  <div class="contenido">
+
+    <span class="mini-titulo">TRABAJO DE CAMPO</span>
+
+    <h2>Voces desde Antankallo</h2>
+
+    <p class="descripcion">
+      Nuestro equipo recorrió la ruta hacia la Catarata de Antankallo
+      para conocer el entorno, registrar el recorrido y analizar cómo
+      RutaSegura puede contribuir a una experiencia turística más segura.
+    </p>
+
+    <div class="videos-grid">
+
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="media/videos/Finalidad_del_proyecto_reyner_web.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <span>RUTASEGURA</span>
+          <h3>¿Cuál es la finalidad del proyecto?</h3>
+          <p>Reyner · Equipo RutaSegura</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="media/videos/Finalidad_del_proyecto_terry_web.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <span>RUTASEGURA</span>
+          <h3>¿Cuál es la finalidad del proyecto?</h3>
+          <p>Terry · Equipo RutaSegura</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="media/videos/dificultad_reyner_web.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <span>EXPERIENCIA EN CAMPO</span>
+          <h3>¿Qué dificultad encontraron durante el recorrido?</h3>
+          <p>Reyner · Equipo RutaSegura</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="media/videos/dificultad_angel_web.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <span>EXPERIENCIA EN CAMPO</span>
+          <h3>¿Qué dificultad encontraron durante el recorrido?</h3>
+          <p>Ángel · Equipo RutaSegura</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="media/videos/futuro_angel_fix.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <span>VISIÓN</span>
+          <h3>¿Cómo imaginamos el futuro de RutaSegura?</h3>
+          <p>Ángel · Equipo RutaSegura</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="media/videos/otras_rutas_web.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <span>CRECIMIENTO</span>
+          <h3>¿RutaSegura puede llegar a otras rutas?</h3>
+          <p>Equipo RutaSegura</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+</section>
+</body>
+</html>
